@@ -95,9 +95,9 @@ RSpec.configure do |config|
     end
     # TODO: Find out why open_transactions ever gets below 0
     # See issue #3428
-    if ApplicationRecord.connection.open_transactions < 0
-      ApplicationRecord.connection.increment_open_transactions
-    end
+    # if ApplicationRecord.connection.open_transactions < 0
+    #   ApplicationRecord.connection.increment_open_transactions
+    # end
     DatabaseCleaner.start
     reset_spree_preferences
   end
